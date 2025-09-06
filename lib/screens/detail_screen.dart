@@ -8,20 +8,25 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final args =
-        ModalRoute.of(context)?.settings.arguments as Map<String, String>;
+        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+
+    final itemId = args?['ItemId'] ?? 'No ID';
+    final message = args?['message'] ?? 'No Message';
+
     return Scaffold(
-      appBar: AppBar(title: Text('Detail Screen')),
+      appBar: AppBar(title: const Text('Detail Screen')),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Item id: ${args['ItemId']}'),
-            Text('Detail: ${args['massage']}'),
+            Text('Item id: $itemId'),
+            Text('Detail: $message'),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.pop(context, 'item1 detail returned.');
               },
-              child: Text('Go Back'),
+              child: const Text('Go Back'),
             ),
           ],
         ),
