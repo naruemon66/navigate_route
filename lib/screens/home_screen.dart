@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:navigate_route/screens/detail_screen.dart';
+<<<<<<< HEAD
 import 'package:navigate_route/screens/third_screen.dart';
+=======
+>>>>>>> 14c9607 (first commit)
 
 class HomeScreen extends StatelessWidget {
   static String routeName = '/';
@@ -9,7 +12,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       appBar: AppBar(title: const Text("Home Screen")),
+=======
+      appBar: AppBar(title: Text("Home Screen")),
+>>>>>>> 14c9607 (first commit)
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -26,6 +33,7 @@ class HomeScreen extends StatelessWidget {
                 );
                 print('returned result: $result');
               },
+<<<<<<< HEAD
               child: const Text('Go to Detail Screen'),
             ),
             const SizedBox(height: 20),
@@ -42,6 +50,9 @@ class HomeScreen extends StatelessWidget {
                 print('returned from ThirdScreen: $result');
               },
               child: const Text('Go to Third Screen'),
+=======
+              child: Text('Go to Detail Screen'),
+>>>>>>> 14c9607 (first commit)
             ),
           ],
         ),
